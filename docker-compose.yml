@@ -14,7 +14,7 @@ services:
       interval: 120s
       timeout: 300s
       retries: 30
-      start_period: 80s
+      start_period: 300s
   am-analytics:
     image: wso2/wso2am-analytics-worker:2.6.0
     ports:
@@ -66,6 +66,7 @@ services:
         condition: service_healthy
     volumes:
       - ./apim:/home/wso2carbon/wso2-config-volume
+      - /home/notadmin/openbanking-api-gateway/target/authenticationendpoint.war:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/webapps/authenticationendpoint.war
     ports:
       - "9763:9763"
       - "9443:9443"

@@ -16,7 +16,7 @@
          logic relies on this. -->
     <AuthManager>
         <!-- Server URL of the Authentication service -->
-        <ServerURL>https://is-as-km:9443/services/</ServerURL>
+        <ServerURL>https://api-gorilla.mifos.io:9443/services/</ServerURL>
         <!-- Admin username for the Authentication manager. -->
         <Username>admin</Username>
         <!-- Admin password for the Authentication manager. -->
@@ -91,7 +91,7 @@
                 <!-- Admin password for the API gateway.-->
                 <Password>${admin.password}</Password>
                 <!-- Endpoint URLs for the APIs hosted in this API gateway.-->
-                <GatewayEndpoint>http://${carbon.local.ip}:${http.nio.port},https://${carbon.local.ip}:${https.nio.port}</GatewayEndpoint>
+                <GatewayEndpoint>http://api-gorilla.mifos.io:${http.nio.port},https://${carbon.local.ip}:${https.nio.port}</GatewayEndpoint>
                 <!-- Endpoint of the Websocket APIs hosted in this API Gateway -->
                 <GatewayWSEndpoint>ws://${carbon.local.ip}:9099</GatewayWSEndpoint>
             </Environment>
@@ -212,7 +212,7 @@
     -->
     <APIKeyValidator>
         <!-- Server URL of the API key manager -->
-        <ServerURL>https://is-as-km:9443/services/</ServerURL>
+        <ServerURL>https://api-gorilla.mifos.io:9443/services/</ServerURL>
 
         <!-- Admin username for API key manager. -->
         <Username>admin</Username>
